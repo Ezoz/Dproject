@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <f:view locale="#{localeChanger.currentLocale}"> 
+        <h:head>
+            <title>#{msg.page_title}</title>
+            <h:outputStylesheet library="css" name="index.css"  />
+        </h:head>
+        <h:body>
+
+            <div class="wrapper">
+
+                <div class="index_wheader">
+                    <ui:insert name="index_header">
+                        <ui:include src="/templates/index/index_header.xhtml"/>
+                    </ui:insert>    
+                </div>
+
+                <div class="wcontent">
+                    <div class="index_content">
+
+                        <div class="index_left">
+                            <ui:insert name="index_welcome">
+                                <ui:include src="/templates/index/index_welcome.xhtml"/>
+                            </ui:insert> 				
+                        </div>
+
+                        <div class="index_right">
+                            <ui:insert name="index_auth">
+                                <ui:include src="/templates/index/index_auth.xhtml"/>
+                            </ui:insert> 
+                        </div>
+
+                        <div class="links_div">
+                            <div class="link_image">
+                                <h:outputLink value="http://www.ica.kz" title="InterGas Central Asia">
+                                    <h:graphicImage library="images" name="ica.jpg" />     
+                                </h:outputLink>
+                            </div>
+                            <div class="link_image">
+                                <h:outputLink value="http://www.kaztranscom.kz" title="KazTransCom">
+                                    <h:graphicImage library="images" name="kaztranscom.jpg" />     
+                                </h:outputLink>
+                            </div>                            
+                            <div class="link_image">
+                                <h:outputLink value="http://www.strategy2050.kz/" title="Казахстан 2050">
+                                    <h:graphicImage library="images" name="2050.gif" />     
+                                </h:outputLink>
+                            </div>                                                           
+                            <div class="link_image">
+                                <h:outputLink value="http://egov.kz/" title="Электронная правительство РК">
+                                    <h:graphicImage library="images" name="egov.jpg" />     
+                                </h:outputLink>
+                            </div>                                                           
+                            <div class="link_image">
+                                <h:outputLink value="http://expo2017astana.com/" title="EXPO 2017">
+                                    <h:graphicImage library="images" name="expo.jpg" />     
+                                </h:outputLink>
+                            </div>                                                        
+
+                        </div>
+
+                    </div>		
+                </div>   
+            </div>
+
+            <div class="wfooter">
+                <ui:insert name="index_footer">
+                    <ui:include src="/templates/index/index_footer.xhtml"/>
+                </ui:insert> 
+            </div>               
+
+
+
+        </h:body>
+    </f:view>
+</html>
+

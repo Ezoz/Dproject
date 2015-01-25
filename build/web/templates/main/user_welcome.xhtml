@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <h:outputStylesheet library="css" name="cabinet.css"  />
+    </h:head>
+    <h:body>
+        <ui:composition>
+
+            <div class="welcome">
+
+                <p>#{msg.hello}</p>
+                <p><span>#{reportController.userFio}</span></p>
+                <p>#{msg.welcome_cabinet}</p>
+                <p>#{msg.welcome_workday}</p>
+
+            </div>
+
+            <h:form>
+
+                <div class="link_cabinet">
+
+                    <h:panelGroup id ="moder_tools" rendered="#{request.isUserInRole('moder')}">   
+                        <p>
+                            <h:commandLink action="#{reportController.getFioOnID()}" value="#{msg.desktop}">
+                                <f:param name="username" value="#{user.username}" />
+                            </h:commandLink>
+                        </p>
+                    </h:panelGroup>                    
+
+                    <h:panelGroup id ="user_tools" rendered="#{request.isUserInRole('user')}">   
+                        <p>
+                            <h:commandLink action="#{reportController.getFioOnID()}" value="#{msg.desktop}">
+                                <f:param name="username" value="#{user.username}" />
+                            </h:commandLink>                                
+                        </p>
+                    </h:panelGroup>   
+                    <h:panelGroup id ="admin_tools" rendered="#{request.isUserInRole('admin')}">   
+                        <p>
+                            <h:commandLink action="admin?faces-redirect=true" value="#{msg.desktop}"/>
+                        </p>
+                    </h:panelGroup>   
+
+
+
+                </div>
+            </h:form>
+        </ui:composition>
+    </h:body>
+</html>

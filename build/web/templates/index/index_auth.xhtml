@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <h:outputStylesheet library="css" name="index.css"  />
+    </h:head>
+    <h:body>
+        <ui:composition>
+
+
+            <div class="login">
+
+                <h1>#{msg.auth}</h1>
+
+                <h:form id="login_form">
+                    <p><h:inputText id="login" value="#{user.username}" required="true" requiredMessage="#{msg.login_required}"> 
+
+                        </h:inputText></p>
+                    <p><h:inputSecret id="password" value="#{user.password}" required="true" requiredMessage="#{msg.pass_required}"> 
+
+                        </h:inputSecret></p>
+
+                    <p class="remember_me">
+                        <label>
+                            <h:selectBooleanCheckbox class="remember_me" id="remember_me" /> 
+                            #{msg.remember}
+                        </label>
+                    </p>
+                    <p class="submit">
+                        <h:commandButton action="#{user.login()}" value="#{msg.entry}">
+                        </h:commandButton>
+                    </p>
+
+                </h:form>                            
+
+            </div>	
+
+            <div class="message">
+                <p><h:message for="login" styleClass="error"/></p>
+                <p><h:message for="password" styleClass="error"/></p>
+                <p><h:message for="login_form" styleClass="error"/></p>
+            </div>
+
+            <script language="javascript">
+                document.getElementById("login_form:login").setAttribute("placeholder","#{msg.input_name}");
+                document.getElementById("login_form:password").setAttribute("placeholder","#{msg.input_password}");                            
+            </script>
+        </ui:composition>
+    </h:body>
+</html>

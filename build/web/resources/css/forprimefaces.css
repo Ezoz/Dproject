@@ -1,0 +1,54 @@
+root { 
+    display: block;
+}
+
+.mystyle.ui-datatable .ui-datatable-header{
+background: #003946 !important;
+
+}
+
+.mystyle.ui-datatable .ui-datatable-header{
+background: #003946 !important;
+
+}
+
+.mystyle.ui-datatable .ui-datatable-even{
+background: white ;
+
+
+}
+
+.mystyle.ui-datatable .ui-datatable-odd.ui-state-hover{
+background: #F4E7C1 ;
+
+}
+
+.mystyle.ui-datatable .ui-datatable-even.ui-state-hover{
+background: #F4E7C1 ;
+
+}
+
+.mystyle.ui-datatable .ui-datatable-even.ui-state-highlight{
+background: #fff9e5 ;
+
+}
+
+.mystyle.ui-datatable .ui-datatable-odd.ui-state-highlight{
+background: #fff9e5 ;
+
+}
+
+.mystyle.ui-datatable .ui-datatable-data-empty td {
+color:red;
+font-weight:bold;
+}
+.ui-datatable.mystyle th {
+background: EAAB00;
+font-family: verdana;
+font-size: 1em;
+}
+
+
+.mystyle.ui-datatable .ui-expanded-row-content{
+background:white;
+}

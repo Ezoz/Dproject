@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <f:view locale="#{localeChanger.currentLocale}">  
+        <h:head>
+            <title><ui:insert name="title"/></title>
+            <h:outputStylesheet library="css" name="cabinet.css"  />
+        </h:head>
+        <h:body>
+
+            <div class="wrapper">
+
+                <div class="wheader">
+                    <ui:insert name="header">
+                        <ui:include src="/templates/header.xhtml"/>
+                    </ui:insert>    
+                </div>
+
+                <div class="wcontent">
+                    <div class="cab_content">
+
+                        <div class="form_div">
+                            <ui:insert name="cabinet_form1">
+                                <ui:include src="/templates/cabinet/cabinet_form1.xhtml"/>
+                            </ui:insert>    
+                        </div>                    
+
+                    </div>		
+                </div>   
+            </div>
+
+        </h:body>
+    </f:view>
+</html>
+
+

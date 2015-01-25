@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>#{msg.cabinet_page}</title>
+    </h:head>
+    <h:body>
+
+        <ui:composition template="/templates/admin/admin_template.xhtml">
+
+            <ui:define name="content">
+
+                <h:form>
+
+                    <p:dataTable id="equipmentList" value="#{adminController.equipmentList}"  var="eqp" paginator="true" styleClass="rep_list"  rows="5"
+                                 paginatorTemplate="{CurrentPageReport} {PageLinks} {RowsPerPageDropdown}"
+                                 rowsPerPageTemplate="5,10,15,20,25" style="width:100%;">
+
+                        <p:column headerText="ID">
+                            <h:outputText value="#{eqp.id}" />
+                        </p:column>
+                        
+
+                        <p:column headerText="#{msg.model_equip}">
+                            <h:outputText value="#{eqp.model}" />
+                        </p:column>
+
+                        <p:column headerText="#{msg.user_area}">
+                            <h:outputText value="#{eqp.user}" />
+                        </p:column>
+
+                        <p:column headerText="#{msg.invent_number}">
+                            <h:outputText value="#{eqp.inventoryNumber}" />
+                        </p:column>                        
+ 
+                        <p:column headerText="#{msg.serial_num}">
+                            <h:outputText value="#{eqp.serialNumber}" />
+                        </p:column>                         
+                        
+                    </p:dataTable>
+                    
+                </h:form>
+                
+            </ui:define>
+
+        </ui:composition>
+
+
+    </h:body>
+</html>

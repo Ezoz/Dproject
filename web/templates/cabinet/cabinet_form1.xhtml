@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <h:outputStylesheet library="css" name="cabinet.css"  />
+    </h:head>
+    <h:body>
+        <ui:composition>
+
+
+            <h3 align="center"> #{msg.form_name_1}</h3>
+
+            <div class="submit_form">
+
+                <h:form id="new_report">
+
+                    <h:panelGrid columns="2" cellspacing="20" cellpadding="2">
+
+                        <h3> #{msg.date_begin} </h3>
+                        <h:inputText id="date_begin" value="#{reportController.insertDataBegin}" styleClass="send_input2" /> 
+
+                        <h3> #{msg.user_area} </h3>
+                        <h:selectOneMenu id="user_area" value="#{reportController.insertEqUser}" >
+                            <f:selectItems value="#{reportController.equipUserList}"/>                          
+                        </h:selectOneMenu>                        
+
+                        <h3> #{msg.model_equip} </h3>
+                        <h:selectOneMenu id="model_equip" value="#{reportController.insertModel}" >
+                            <f:selectItems value="#{reportController.equipModelList}"/>                          
+                        </h:selectOneMenu>                         
+
+                        <h3> #{msg.invent_number} </h3>
+                        <h:selectOneMenu id="invent_number" value="#{reportController.insertInvent}" >
+                            <f:selectItems value="#{reportController.equipInventList}"/>                          
+                        </h:selectOneMenu>                          
+
+                        <h3> #{msg.serial_num} </h3>
+                        <h:inputText id="serial_num" value="#{reportController.insertSerial}" styleClass="send_input2"/>                          
+
+                        <h3> #{msg.descr_problem} </h3>
+                        <h:inputTextarea id="descr_problem" value="#{reportController.insertDescr}" rows="3" cols="25" styleClass="send_input2"/>
+
+                        <h3> #{msg.decision} </h3>
+                        <h:inputTextarea id="decision" value="#{reportController.insertDecision}" rows="6" cols="35" styleClass="send_input"/>
+
+                        <h3> #{msg.date_end} </h3>
+                        <h:inputText id="date_end" value="#{reportController.insertDateEnd}" styleClass="send_input2"/>                         
+
+                        <h3> #{msg.performer} </h3>
+                        <h:selectOneMenu id="performer" value="#{reportController.insertPerformer}" >
+                            <f:selectItem itemValue="#{reportController.userFio}"   itemLabel= "#{reportController.userFio}"/>                              
+                        </h:selectOneMenu>
+
+                        <h3> #{msg.department} </h3>
+                        <h:selectOneMenu id="department" value="#{reportController.insertDepartment}" >
+                            <f:selectItem itemValue="IT"   itemLabel= "Информационные технологии"/>
+                            <f:selectItem itemValue="TK"   itemLabel= "Телекоммуникации"/>                        
+                        </h:selectOneMenu>
+
+                        <h:commandButton immediate="true" action="#{reportController.cancelEdit()}"  value="#{msg.cancel}" styleClass="input3" />
+                        <h:commandButton action="#{reportController.insertReport()}"  value="#{msg.from_submit}" styleClass="input3" /> 
+                    </h:panelGrid> 
+
+                    <script language="javascript">
+                        document.getElementById("new_report:date_begin").setAttribute("placeholder","#{msg.date_format}");
+                        document.getElementById("new_report:date_end").setAttribute("placeholder","#{msg.date_format}");                            
+                    </script>
+
+                </h:form>
+
+            </div>
+
+        </ui:composition>
+
+
+    </h:body>
+</html>

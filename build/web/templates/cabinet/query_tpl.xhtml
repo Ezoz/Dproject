@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <h:outputStylesheet library="css" name="cabinet.css"  />
+    </h:head>
+    <h:body>
+        <ui:composition>
+
+            <h:panelGroup id="moder_div" rendered="#{request.isUserInRole('moder')}" >
+                <div class="query">
+                    <div class="query_form">
+
+                        <h:form>
+
+                            <table>
+
+                                <tr>
+                                    <td><h3> #{msg.report_date} </h3></td>
+                                    <td>
+                                        <h:selectOneMenu id="report_date" value="#{reportController.selectedDate}" >
+                                            <f:selectItems value="#{reportController.dateCreateList}"/>                          
+                                        </h:selectOneMenu>                              
+
+                                    </td>
+
+                                    <td><h3> #{msg.report_status} </h3></td>
+                                    <td> <h:selectOneRadio layout="lineDirection" value="#{reportController.selectedStatus}" >
+                                            <f:selectItem itemValue="all" itemLabel= "Все" />
+                                            <f:selectItem itemValue="1"     itemLabel= "Принятые"/>
+                                            <f:selectItem itemValue="0"   itemLabel= "Непринятые"/>
+                                        </h:selectOneRadio>
+                                    </td>                            
+
+
+                                </tr>
+
+                                <tr>
+                                    <td><h3> #{msg.report_perfomer}</h3> </td>
+
+                                    <td>
+                                        <h:selectOneMenu id="report_performer" value="#{reportController.selectedPerformer}" >
+                                            <f:selectItems value="#{reportController.performerList}"/>                          
+                                        </h:selectOneMenu>
+                                    </td>
+
+                                    <td><h3> #{msg.report_dep} </h3></td>
+                                    <td> <h:selectOneRadio layout="lineDirection" value="#{reportController.selectedDepartment}">
+                                            <f:selectItem itemValue="all" itemLabel= "Все" />
+                                            <f:selectItem itemValue="IT"     itemLabel= "ИТ"/>
+                                            <f:selectItem itemValue="TK"   itemLabel= "КТ"/>
+                                        </h:selectOneRadio></td>
+                                </tr>
+
+                            </table>
+
+                            <h:selectOneMenu id="count_report" value="#{reportController.reportsOnPage}" styleClass="page_count" valueChangeListener="#{reportController.booksOnPageChanged(e)}">
+                                <f:selectItem itemValue="4" itemLabel="4"/>                          
+                                <f:selectItem itemValue="6" itemLabel="6"/>                          
+                                <f:selectItem itemValue="8" itemLabel="8"/>                          
+                                <f:selectItem itemValue="10" itemLabel="10"/>                          
+                                <f:selectItem itemValue="15" itemLabel="15"/>   
+                                <f:ajax event="change" execute="@form" onevent="showProgress" render=":report_form :report_form:reportlist"/>
+                            </h:selectOneMenu>
+
+
+                            <div class="div_button">
+                                <h:commandButton value="#{msg.report_select}" action="#{reportController.fillReportsByCriterion()}"/>
+                            </div>
+
+                        </h:form>
+
+                    </div>
+                </div>
+            </h:panelGroup>
+
+
+            <h:panelGroup id="user_div" rendered="#{request.isUserInRole('user')}" >
+
+                <div class="query2">
+
+                    <div class="query_form">
+
+                        <h:form>
+
+                            <table>
+
+                                <tr>
+                                    <td><h3> #{msg.report_date} </h3></td>
+                                    <td>
+                                        <h:selectOneMenu id="report_date" value="#{reportController.selectedDate}" >
+                                            <f:selectItems value="#{reportController.dateCreateList}"/>                          
+                                        </h:selectOneMenu>                              
+
+                                    </td>
+
+                                    <td><h3> #{msg.report_status} </h3></td>
+                                    <td> <h:selectOneRadio layout="lineDirection" value="#{reportController.selectedStatus}" >
+                                            <f:selectItem itemValue="all" itemLabel= "Все" />
+                                            <f:selectItem itemValue="1"     itemLabel= "Принятые"/>
+                                            <f:selectItem itemValue="0"   itemLabel= "Непринятые"/>
+                                        </h:selectOneRadio>
+                                    </td>                            
+
+                                </tr>
+
+                            </table>
+
+                            <h:selectOneMenu id="count_report" value="#{reportController.reportsOnPage}" styleClass="page_count" valueChangeListener="#{reportController.booksOnPageChanged(e)}">
+                                <f:selectItem itemValue="4" itemLabel="4"/>                          
+                                <f:selectItem itemValue="6" itemLabel="6"/>                          
+                                <f:selectItem itemValue="8" itemLabel="8"/>                          
+                                <f:selectItem itemValue="10" itemLabel="10"/>                          
+                                <f:selectItem itemValue="15" itemLabel="15"/>   
+                                <f:ajax event="change" execute="@form" onevent="showProgress" render=":report_form :report_form:reportlist"/>
+                            </h:selectOneMenu>                            
+
+                            <h:commandButton value="#{msg.report_select}" action="#{reportController.fillReportsByCriterionForUser()}" styleClass="input2" />
+                            <h:commandButton value="#{msg.create_report}" action="report_create.xhtml?faces-redirect=true" styleClass="input2"/>
+
+                        </h:form>
+
+                    </div>
+
+                </div>
+
+            </h:panelGroup>
+
+        </ui:composition>
+
+    </h:body>
+</html>

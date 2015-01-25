@@ -1,0 +1,241 @@
+* {
+    margin: 0;    padding: 0;
+}
+html, body {
+    height: 100%; background: #eaeaea;   
+}
+.wrapper {
+    background: #eaeaea;    width: 100%;    min-height: 100%;
+    height: auto !important;    height: 100%;    margin: 0 0 -50px 0;
+}
+
+/* Header кабинета*/
+.wheader {
+    width: 100%; height: 85px;  background: #CD2626;
+}
+.header {
+    width: 1150px;  height: 50px;  margin: auto;
+}
+
+.description {
+    float: left; height: 40px;  width: 450px; 
+}
+.winfo_user {
+    width: 100%;  height: 25px;  background: #000;
+}
+.info_user {
+    width: 1150px;  height: 25px;   margin: auto;
+}
+.user_status {
+    width: 500px;   height: 100%;  float: right;
+}
+.user_status a  {
+    float: right;  color: #fff;
+}
+
+.locales {
+    float: left;  width: 80px;
+}
+.locales a {
+    color: #fff; float: left;  margin:2px 5px; text-decoration: none;
+}
+.locales a:hover {
+    color: red; text-decoration: none;
+}
+.locales a:before {
+    color: red; text-decoration: none;
+}
+
+
+/* Content cabineta*/
+.wcontent {
+    width: 100%;    height: auto;  min-height: 500px;
+}
+
+
+select, selectBox {
+    width: 250px; height: 26px; border: 1px solid #e2e2e2; border-radius: 3px; border-color: #000099;
+    font-size: 16px; color: #000; box-shadow: inset 0 0 7px #e2e2e2; position: relative;
+}
+.selectBox:hover {
+    color: #000;
+    text-decoration: none;
+}
+.selectBox-label {
+    position: absolute; top: 9px; left: 10px;
+}
+.selectBox-arrow {
+    position: absolute;
+    left: auto;
+    right: 10px;
+    top: 17px;
+    width: 11px;
+    height: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    background: url("#{resource['images:select.png']}")  0 0 no-repeat;
+}
+.selectBox-dropdown-menu {
+    position: absolute;
+    list-style: none;
+    font-size: 16px;
+    line-height: 20px;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #e2e2e2;
+}
+input[type=submit]{
+
+    background: #adaeb3;
+    background-image: -webkit-linear-gradient(top, #adaeb3, #4d474d);
+    background-image: -moz-linear-gradient(top, #adaeb3, #4d474d);
+    background-image: -ms-linear-gradient(top, #adaeb3, #4d474d);
+    background-image: -o-linear-gradient(top, #adaeb3, #4d474d);
+    background-image: linear-gradient(to bottom, #adaeb3, #4d474d);
+    -webkit-border-radius: 2;
+    -moz-border-radius: 2;
+    border-radius: 2px;
+    font-family: Arial;
+    color: #fff;
+    font-size: 18px;
+    padding: 5px 10px;
+    border: solid #000000 1px;
+    text-decoration: none;
+    float: left;  
+}
+
+input[type=submit]:hover {
+
+    background: #4d474d;
+    background-image: -webkit-linear-gradient(top, #4d474d, #adaeb3);
+    background-image: -moz-linear-gradient(top, #4d474d, #adaeb3);
+    background-image: -ms-linear-gradient(top, #4d474d, #adaeb3);
+    background-image: -o-linear-gradient(top, #4d474d, #adaeb3);
+    background-image: linear-gradient(to bottom, #4d474d, #adaeb3);
+    text-decoration: none;
+
+}
+.input2[type=submit]{
+
+    background: #adaeb3;
+    background-image: -webkit-linear-gradient(top, #adaeb3, #4d474d);
+    background-image: -moz-linear-gradient(top, #adaeb3, #4d474d);
+    background-image: -ms-linear-gradient(top, #adaeb3, #4d474d);
+    background-image: -o-linear-gradient(top, #adaeb3, #4d474d);
+    background-image: linear-gradient(to bottom, #adaeb3, #4d474d);
+    -webkit-border-radius: 2;
+    -moz-border-radius: 2;
+    border-radius: 2px;
+    font-family: Arial;
+    color: #fff;
+    font-size: 18px;
+    padding: 5px 10px;
+    border: solid #000000 1px;
+    text-decoration: none;
+    margin-left: 10px;
+    float: right;
+}
+
+.input2[type=submit]:hover {
+
+    background: #4d474d;
+    background-image: -webkit-linear-gradient(top, #4d474d, #adaeb3);
+    background-image: -moz-linear-gradient(top, #4d474d, #adaeb3);
+    background-image: -ms-linear-gradient(top, #4d474d, #adaeb3);
+    background-image: -o-linear-gradient(top, #4d474d, #adaeb3);
+    background-image: linear-gradient(to bottom, #4d474d, #adaeb3);
+    text-decoration: none;
+
+}
+.desktop {
+    width: 810px; height: auto;  margin-left: 20px;  float: left; padding: 20px 10px; background: #fff;
+}
+.submit_form {
+    width: 750px; height: auto;  background: mediumaquamarine;  border: 2px solid #000;  
+    margin:5px auto;  padding: 5px 10px 20px;
+}
+.form_div {
+    width: 850px; height: auto;  margin: auto;   padding: 10px 10px;     
+}
+.form_div input {
+
+}
+
+.logo {
+    width: 220px; margin: 15px 2px 10px;	float: left; 
+}
+.logo img {
+    width: 210px; height: 70px;
+}
+.logo2 {
+    width: 220px; margin: 5px 2px 5px;	float: left; 
+}
+.logo2 img {
+    width: 210px; height: 50px;
+}
+
+
+
+/* Главный меню*/
+.main_content{
+    width: 1200px;  margin: auto;  height: 500px;  padding-top: 10px;
+   }
+   
+.admin_menu a {
+    color: #FFF;  background: #CD2626;;  padding: 5px  10px; float: left; text-decoration: none;
+    margin: 5px;  font-family: Segoe UI Light, sans-serif,Tahoma, serif; font-size: 110%;
+    text-align: center; line-height: 2.0; font-weight: bold; display: block;
+}
+.admin_menu a:hover {
+    opacity: 0.7;
+}
+.content {
+    width: 100%; height: auto; margin: 20px auto;   float: left;
+}
+
+.rep_list {
+    width: 1150px; float: left; font: 12px sans-serif,serif,tahoma;
+}
+
+.ui-datatable.books_list .ui-datatable-data tr,
+.ui-datatable.books_list .ui-datatable-data-empty tr,
+.ui-datatable.books_list .ui-datatable-data td,
+.ui-datatable.books_list .ui-datatable-data-empty td {
+    border-style: none;
+    white-space: normal;
+    padding:0;
+    background:none;
+}
+
+.ui-datatable.rep_list table{
+    border: none;
+    border-collapse: inherit;    
+}
+
+
+
+.btn {
+  background: #cd2626;
+  background-image: -webkit-linear-gradient(top, #cd2626, #f7afc2);
+  background-image: -moz-linear-gradient(top, #cd2626, #f7afc2);
+  background-image: -ms-linear-gradient(top, #cd2626, #f7afc2);
+  background-image: -o-linear-gradient(top, #cd2626, #f7afc2);
+  background-image: linear-gradient(to bottom, #cd2626, #f7afc2);
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 5px 15px 5px 15px;
+  border: solid #cd2626 1px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #f7afc2;
+  background-image: -webkit-linear-gradient(top, #f7afc2, #cd2626);
+  background-image: -moz-linear-gradient(top, #f7afc2, #cd2626);
+  background-image: -ms-linear-gradient(top, #f7afc2, #cd2626);
+  background-image: -o-linear-gradient(top, #f7afc2, #cd2626);
+  background-image: linear-gradient(to bottom, #f7afc2, #cd2626);
+  text-decoration: none;
+}

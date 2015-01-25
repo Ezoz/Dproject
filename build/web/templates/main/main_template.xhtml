@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <f:view locale="#{localeChanger.currentLocale}">  
+        <h:head>
+            <title>#{msg.main_page}</title>
+            <h:outputStylesheet library="css" name="cabinet.css"  />
+        </h:head>
+        <h:body>
+
+            <div class="wrapper">
+
+                <div class="wheader">
+                    <ui:insert name="header">
+                        <ui:include src="/templates/header.xhtml"/>
+                    </ui:insert>    
+                </div>
+
+                <div class="wcontent">
+                    <div class="main_content">
+
+                        <div class="main_left">
+                            <ui:insert name="main_news">
+                                <ui:include src="/templates/main/main_news.xhtml"/>
+                            </ui:insert> 
+                        </div>
+
+                        <div class="main_center">
+                            <ui:insert name="user_welcome">
+                                <ui:include src="/templates/main/user_welcome.xhtml"/>
+                            </ui:insert>    
+                        </div>
+
+                        <div class="main_right">
+                            <ui:insert name="main_widgets">
+                                <ui:include src="/templates/main/main_widgets.xhtml"/>
+                            </ui:insert>    
+                        </div>
+
+                    </div>		
+                </div>   
+            </div>       
+
+        </h:body>
+    </f:view>
+</html>
+

@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+            <h:outputStylesheet library="css" name="cabinet.css"  />
+            <h:outputScript library="js" name="library.js" target="head"/>
+    </h:head>
+    <h:body>
+        <ui:composition>
+            <h:form id="report_form">
+
+                <div class="action">
+
+                    <h:panelGroup id = "for_print" rendered="#{request.isUserInRole('moder')}">
+                        <h:commandButton value="#{msg.print}" action="print?faces-redirect=true" />
+                    </h:panelGroup>
+
+                    
+                    <h:panelGroup id="pager"  rendered="#{reportController.totalReportsCount>reportController.reportsOnPage}">
+                        <div class="pager">                         
+                            #{msg.pager}
+
+                            <ui:repeat id="pages" value="#{reportController.pageNumbers}" var="pageNumber" >
+                                <h:commandLink value="#{pageNumber}" action="#{reportController.selectPage()}"  styleClass="#{pageNumber == reportController.selectedPageNumber ? 'selected_page':'href'}">
+                                    <f:param name="page_number" value="#{pageNumber}" />
+                                </h:commandLink>
+
+                            </ui:repeat>
+
+                        </div>
+                    </h:panelGroup>
+
+                    <h:panelGroup id = "for_update" rendered="#{request.isUserInRole('user')}">
+                        <h:commandButton value="#{msg.change}" action="report_update?faces-redirect=true" styleClass="input2"/>
+                        <h:commandButton value="#{msg.delete}" action="#{reportController.deleteReportOnId()}" styleClass="input2"/>
+                    </h:panelGroup>
+
+                    <h:panelGroup id = "for_save" rendered="#{request.isUserInRole('moder')}">
+                        <h:commandButton value="#{msg.accept}" action="#{reportController.saveReport()}" styleClass="input2"/>
+                    </h:panelGroup>
+
+                </div>
+
+                <h:dataTable id="reportlist" value="#{reportController.reportList}" var="rep" cellspacing="1px"
+                             styleClass="reportTable"  columnClasses="datacolumn1, datacolumn2, datacolumn3, datacolumn4, datacolumn5, 
+                             datacolumn6, datacolumn7, datacolumn8, datacolumn9, datacolumn10, datacolumn11 "  
+                             rowClasses="dataRow1, dataRow2" headerClass="headertable">
+
+                    <h:column>
+                        <f:facet name="header">№</f:facet>
+                        #{rep.id}
+                    </h:column>    
+
+                    <h:column>
+                        <f:facet name="header">#{msg.date_begin}</f:facet>
+                        #{rep.dateBegin}
+                    </h:column>              
+
+                    <h:column>
+                        <f:facet name="header">#{msg.user_area}</f:facet>
+                        #{rep.user}
+                    </h:column>  
+
+                    <h:column>
+                        <f:facet name="header">#{msg.model_equip}</f:facet>
+                        #{rep.model}
+                    </h:column>  
+
+                    <h:column>
+                        <f:facet name="header">#{msg.invent_number}</f:facet>
+                        #{rep.inventory}
+                    </h:column>  
+
+                    <h:column>
+                        <f:facet name="header">#{msg.serial_num}</f:facet>
+                        #{rep.serial}
+                    </h:column> 
+
+                    <h:column>
+                        <f:facet name="header">#{msg.date_end}</f:facet>
+                        #{rep.dateEnd}
+                    </h:column>                 
+
+                    <h:column >
+                        <f:facet name="header">#{msg.descr_problem}</f:facet>
+                        #{rep.description}
+                    </h:column> 
+
+                    <h:column>
+                        <f:facet name="header">#{msg.decision}</f:facet>
+                        #{rep.desicion}
+
+                    </h:column> 
+
+                    <h:column>
+                        <f:facet name="header">#{msg.performer}</f:facet>
+                        #{rep.performer}
+                    </h:column> 
+
+                    <h:column>
+                        <f:facet name="header">o</f:facet>
+                        <h:selectBooleanCheckbox value="#{rep.edit}" rendered="#{rep.status != 1}"/>    
+                    </h:column> 
+
+                </h:dataTable>
+
+            </h:form>
+
+        </ui:composition>
+
+    </h:body>
+</html>

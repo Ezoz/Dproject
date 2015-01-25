@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>#{msg.page_title}</title>
+        <h:outputStylesheet library="css" name="cabinet.css"  />
+    </h:head>
+    <h:body class="print_body">
+
+        <div class="titul">
+
+            <table>
+                <tr>
+                    <td colspan="4">
+                        <p><b>#{msg.print_KTC}</b></p>
+                        <p><b>Ежедневный отчёт по техническому обслуживанию ТК и ИТ оборудованию АО "ИЦА"</b></p>                        
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <p>Рабочая форма №</p>
+                        <p>КТС-РФ-ЮФ-64</p>
+                    </td>
+
+                    <td>
+                        <p>Страница</p>
+                        <p>#{reportController.selectedPageNumber} из #{reportController.pagesCount}</p>
+                    </td>
+
+                    <td>
+                        <p>Дата издания 26.10.2010 г</p>
+                    </td>
+
+                    <td>
+                        <p>Издание №2</p>
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <b><p align="center">Ежедневный отчёт проведения работ по ТО ТК и ИТ оборудованию АО "ИЦА"</p></b>
+
+        <div class="print">
+
+            <h:form>
+
+                <h:dataTable id="reportlist" value="#{reportController.reportList}" var="rep" cellspacing="1px"
+                             styleClass="reportTable"  columnClasses="datacolumn1, datacolumn2, datacolumn3, datacolumn4, datacolumn5, 
+                             datacolumn6, datacolumn7, datacolumn8, datacolumn9, datacolumn10, datacolumn11 "  
+                             headerClass="headertable">
+
+                    <h:column>
+                        <f:facet name="header">№</f:facet>
+                        #{rep.id}
+                    </h:column>    
+
+                    <h:column>
+                        <f:facet name="header">#{msg.date_begin}</f:facet>
+                        #{rep.dateBegin}
+                    </h:column>              
+
+                    <h:column>
+                        <f:facet name="header">#{msg.user_area}</f:facet>
+                        #{rep.user}
+                    </h:column>  
+
+                    <h:column>
+                        <f:facet name="header">#{msg.model_equip}</f:facet>
+                        #{rep.model}
+                    </h:column>  
+
+                    <h:column>
+                        <f:facet name="header">#{msg.invent_number}</f:facet>
+                        #{rep.inventory}
+                    </h:column>  
+
+                    <h:column>
+                        <f:facet name="header">#{msg.serial_num}</f:facet>
+                        #{rep.serial}
+                    </h:column> 
+
+                    <h:column>
+                        <f:facet name="header">#{msg.date_end}</f:facet>
+                        #{rep.dateEnd}
+                    </h:column>                 
+
+                    <h:column >
+                        <f:facet name="header">#{msg.descr_problem}</f:facet>
+                        #{rep.description}
+                    </h:column> 
+
+                    <h:column>
+                        <f:facet name="header">#{msg.decision}</f:facet>
+                        #{rep.desicion}
+
+                    </h:column> 
+
+                    <h:column>
+                        <f:facet name="header">#{msg.performer}</f:facet>
+                        #{rep.performer}
+                    </h:column> 
+
+                </h:dataTable>
+
+            </h:form>
+
+        </div>
+        <b><p align="center">Согласовано со специалистом ИТ и ТК ___________________#{reportController.userFio}</p></b>
+    </h:body>
+</html>
+

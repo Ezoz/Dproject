@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <h:outputStylesheet library="css" name="cabinet.css"  />
+    </h:head>
+    <h:body>
+        <ui:composition>
+
+            <div class="news">
+                <h4>#{msg.declaration}</h4>
+                <p>
+                    Уважаемые Абоненты! АО «KazTransCom» информирует о закрытии фронт-офиса в БЦ Номад. 
+                    С 01.07.2014 года прием оплат, заявлений и обращений будет производиться в офисе, 
+                    расположенном по адресу: г.Астана, ул. Кабанбай батыра д. 7/1.
+                </p>
+
+            </div>
+            <div class="news">
+                <h4>#{msg.news}</h4>
+                <p>
+                    ComOn — это выгодные тарифы на предоставление доступа к сети Интернет и телефонной связи, 
+                    бесплатные междугородные телефонные соединения, высокая скорость передачи данных.
+                    Более подробно об услуге ComOn можно ознакомиться по ссылке 
+                </p>
+                <p> 
+                    <h:outputLink value="http://www.kaztranscom.kz/ru/services/individuals/comon/" target="_blank">
+                        #{msg.more}
+                    </h:outputLink>
+                </p>
+
+            </div>
+
+        </ui:composition>
+    </h:body>
+</html>

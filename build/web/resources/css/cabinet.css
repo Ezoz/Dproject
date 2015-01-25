@@ -1,0 +1,451 @@
+* {
+    margin: 0;    padding: 0;
+}
+html, body {
+    height: 100%; background: #eaeaea;   
+}
+.wrapper {
+    background: #eaeaea;    width: 100%;    min-height: 100%;
+    height: auto !important;    height: 100%;    margin: 0 0 -50px 0;
+}
+
+/* Header кабинета*/
+.wheader {
+    width: 100%; height: 85px;  background:#000080;
+}
+.header {
+    width: 1150px;  height: 50px;  margin: auto;
+}
+
+.description {
+    float: left; height: 40px;  width: 450px;
+}
+.winfo_user {
+    width: 100%;  height: 25px;  background: #000055;
+}
+.info_user {
+    width: 1150px;  height: 25px;   margin: auto;
+}
+.user_status {
+    width: 200px;     float: right;  margin-top: -20px;
+}
+.user_status a  {
+    float: right;  color: #fff;
+}
+
+.fio {
+    color: #fff; width: 950px; font-size: 120%;  padding-top: 2px; text-align: right;
+}
+
+.locales {
+    float: left;  width: 80px;
+}
+.locales a {
+    color: #fff; float: left;  margin:2px 5px; text-decoration: none;
+}
+.locales a:hover {
+    color: red; text-decoration: none;
+}
+.locales a:before {
+    color: red; text-decoration: none;
+}
+/* Меню на headere*/
+#menu{
+    width: 50%; margin: 0px auto;   
+}
+#menu ul {
+    display: table-row;  width: 100%;
+}
+#menu ul li {
+    display: table-cell;  height: 50px; text-align: center; vertical-align: bottom;
+}
+#menu ul li a {
+    color: #fff; font: 16px Segoe UI Light,Tahoma, sans-serif, serif;; height: 50px; display: table-cell; 
+    width: 400px; vertical-align: middle;
+}
+#menu ul li a:hover {
+    text-decoration: none;
+}
+/* конец Header кабинета*/
+
+/* Content cabineta*/
+.wcontent {
+    width: 100%;    height: auto;  min-height: 500px;
+}
+
+.query {
+    width: 1150px;  height: auto !important;  min-height: 250px;  margin: 10px auto 10px;  
+    border: 1px solid #000066;  background: #d4d4d4   
+}
+.query_form {
+    width: 100%;  height: 100%; float: right;  padding-right: 20px; 
+}
+.query_form table {
+    float: right; width: 97%;  margin: 15px auto;  padding-right: 15px;  background: #eaeaea;  
+}
+.query_form table tr {
+    height: 50px;  text-align: right;
+}
+.query_form table tr td table{
+    text-align: right;  padding-right: 0px;
+}
+
+.query2 {
+    width: 1150px;  height: auto !important;  min-height: 165px;  margin: 10px auto 10px;  
+    border: 1px solid #000066;  background: #d4d4d4   
+}
+.query2_form {
+    width: 100%;  height: 100%; float: right;  padding-right: 20px; 
+}
+.query2_form table {
+    float: right; width: 97%;  margin: 15px auto;  padding-right: 15px;  background: #eaeaea;  
+}
+.query2_form table tr {
+    height: 50px;  text-align: right;
+}
+.query2_form table tr td table{
+    text-align: right;  padding-right: 0px;
+}
+.div_button {
+    float: right; margin-left: 10px;
+}
+.div_button2 {
+    float: right; margin-right: 20px;  margin-top: 6px; 
+}
+.action {
+    width: 1150px;  height: 40px;  margin: 5px auto; 
+    padding-top: 10px; text-align: right; 
+}
+.report {
+    width: 1155px;  height: auto !important;  margin: 10px auto 50px;  min-height: 500px;   
+}
+.reportTable {
+    font-size: 12px; width: 1155px;
+}
+.headertable {
+    text-align:center;    background: #000066; 
+    border-bottom:2px solid #BBBBBB;  color: #fff; 
+}
+.dataRow1 {
+    height: 50px;  background: #98F5FF;  
+}
+.dataRow2 {
+    height: 50px;  background: #FFFACD; 
+}
+
+.datacolumn1 {
+    width: 20px;   vertical-align: middle; text-align: center;
+}
+.datacolumn2 {
+    width: 90px;   vertical-align: middle; text-align: center;
+}
+.datacolumn3 {
+    width: 90px;   vertical-align: middle; text-align: center;
+}
+.datacolumn4 {
+    width: 120px;   vertical-align: middle; text-align: center;
+}
+.datacolumn5 {
+    width: 80px;   vertical-align: middle; text-align: center;
+}
+.datacolumn6 {
+    width: 100px;   vertical-align: middle; text-align: center;
+}
+.datacolumn7 {
+    width: 90px;   vertical-align: middle; text-align: center;
+}
+.datacolumn8 {
+    width: 150px;   vertical-align: middle; text-align: center;
+}
+.datacolumn9 {
+    width: 250px;   vertical-align: middle; text-align: left;
+}
+.datacolumn10 {
+    width: 80px;   vertical-align: middle; text-align: center;
+}
+.datacolumn11 {
+    width: 30px;   vertical-align: middle; text-align: center;
+}
+
+.print {
+    width: 1155px;  height: auto;  margin: 20px auto; 
+}
+.print table {
+    width: 100%; height: 100%; border: 2px solid black; border-collapse: collapse;
+}
+
+.print table td {
+     border: 2px solid black; 
+}
+
+.print table th {
+    text-align: center; border: 2px solid black; color: black; background: none;
+}
+.titul {
+    width: 1150px;  height: auto;  margin: 20px auto; height: 100px;
+}
+
+.titul table {
+    width: 100%; height: 100%; border: 2px solid black; border-collapse: collapse;
+}
+
+.titul table td {
+    text-align: center; border: 2px solid black; background: none;
+}
+
+.print_body {
+    background: #fff;
+}
+select, selectBox {
+    width: 250px; height: 26px; border: 1px solid #e2e2e2; border-radius: 3px; border-color: #000099;
+    font-size: 16px; color: #000; box-shadow: inset 0 0 7px #e2e2e2; position: relative;
+}
+.selectBox:hover {
+    color: #000;
+    text-decoration: none;
+}
+.selectBox-label {
+    position: absolute; top: 9px; left: 10px;
+}
+.selectBox-arrow {
+    position: absolute;
+    left: auto;
+    right: 10px;
+    top: 17px;
+    width: 11px;
+    height: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    background: url("#{resource['images:select.png']}")  0 0 no-repeat;
+}
+.selectBox-dropdown-menu {
+    position: absolute;
+    list-style: none;
+    font-size: 16px;
+    line-height: 20px;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #e2e2e2;
+}
+input[type=submit]{
+
+    background: #adaeb3;
+    background-image: -webkit-linear-gradient(top, #adaeb3, #4d474d);
+    background-image: -moz-linear-gradient(top, #adaeb3, #4d474d);
+    background-image: -ms-linear-gradient(top, #adaeb3, #4d474d);
+    background-image: -o-linear-gradient(top, #adaeb3, #4d474d);
+    background-image: linear-gradient(to bottom, #adaeb3, #4d474d);
+    -webkit-border-radius: 2;
+    -moz-border-radius: 2;
+    border-radius: 2px;
+    font-family: Arial;
+    color: #fff;
+    font-size: 18px;
+    padding: 5px 10px;
+    border: solid #000000 1px;
+    text-decoration: none;
+    float: left;  
+}
+
+input[type=submit]:hover {
+
+    background: #4d474d;
+    background-image: -webkit-linear-gradient(top, #4d474d, #adaeb3);
+    background-image: -moz-linear-gradient(top, #4d474d, #adaeb3);
+    background-image: -ms-linear-gradient(top, #4d474d, #adaeb3);
+    background-image: -o-linear-gradient(top, #4d474d, #adaeb3);
+    background-image: linear-gradient(to bottom, #4d474d, #adaeb3);
+    text-decoration: none;
+
+}
+.input2[type=submit]{
+
+    background: #adaeb3;
+    background-image: -webkit-linear-gradient(top, #adaeb3, #4d474d);
+    background-image: -moz-linear-gradient(top, #adaeb3, #4d474d);
+    background-image: -ms-linear-gradient(top, #adaeb3, #4d474d);
+    background-image: -o-linear-gradient(top, #adaeb3, #4d474d);
+    background-image: linear-gradient(to bottom, #adaeb3, #4d474d);
+    -webkit-border-radius: 2;
+    -moz-border-radius: 2;
+    border-radius: 2px;
+    font-family: Arial;
+    color: #fff;
+    font-size: 18px;
+    padding: 5px 10px;
+    border: solid #000000 1px;
+    text-decoration: none;
+    margin-left: 10px;
+    float: right;
+}
+
+.input2[type=submit]:hover {
+
+    background: #4d474d;
+    background-image: -webkit-linear-gradient(top, #4d474d, #adaeb3);
+    background-image: -moz-linear-gradient(top, #4d474d, #adaeb3);
+    background-image: -ms-linear-gradient(top, #4d474d, #adaeb3);
+    background-image: -o-linear-gradient(top, #4d474d, #adaeb3);
+    background-image: linear-gradient(to bottom, #4d474d, #adaeb3);
+    text-decoration: none;
+
+}
+.desktop {
+    width: 810px; height: auto;  margin-left: 20px;  float: left; padding: 20px 10px; background: #fff;
+}
+.submit_form {
+    width: 750px; height: 690px;  background: mediumaquamarine;  border: 2px solid #000;  
+    margin:5px auto;  padding: 5px 10px 20px;
+}
+
+.update_form   table {
+    width: 100%; /* Ширина таблицы */
+    color: #000; /* Цвет текста */
+    border-spacing: 1px;  
+   }
+ .update_form   table  td {
+     padding: 5px; /* Поля вокруг текста */
+   }
+.form_div {
+    width: 850px; height: auto;  margin: auto;   padding: 10px 10px;     
+}
+.form_div input {
+
+}
+
+.logo {
+    width: 220px; margin: 15px 2px 10px;	float: left; 
+}
+.logo img {
+    width: 210px; height: 70px;
+}
+.logo2 {
+    width: 220px; margin: 5px 2px 5px;	float: left; 
+}
+.logo2 img {
+    width: 210px; height: 50px;
+}
+
+
+
+/* Главный меню*/
+.news {
+    width: 340px;  height: 250px;  margin: auto; background: #B9D3EE;  margin-bottom: 10px; 
+    border: 1px solid #000099; 
+}
+.news h4 {
+    text-align: center;	color: #fff; font-family:  Segoe UI Light,Tahoma, sans-serif, serif;
+    padding: 5px;  background: cornflowerblue; border-bottom: 1px solid #000080;	
+    color: #fff;  font-size: 120%;	
+
+}
+.news img {
+    width: 340px;  height: 210px;
+}
+.news p {
+    text-align: justify; font-family: verdana, sans-serif, Tahoma, serif; 
+    font-size: 14px;  color: #000044; margin:8px 8px 3px; font-style: italic;  
+}
+
+.main_content{
+    width: 1150px;  margin: auto;  height: 380px;  padding-top: 10px;
+}
+.main_left {
+    width: 350px; float: left;  height: 500px;   
+}
+.main_center {
+    float: left;  width: 430px; height: 510px; margin: auto 10px;    
+}
+.main_right {
+    float: left;  width: 350px;  height: 500px;   
+}
+.welcome {
+    width: 400px; margin: 5px auto 50px; background: #fff;  padding: 10px;   
+    height: 225px; border: 5px solid cornflowerblue;
+}
+.welcome p{
+    font-family: Segoe UI Light, sans-serif,Tahoma, serif; margin: 10px; line-height: 1.8;
+    color: #000055; text-align: center;   font-weight: bold;    font-size: 120%;
+}
+.link_cabinet {
+    width: 380px;  padding: 10px;  margin: 10px auto;  background: #008B8B; 
+    text-align: center;  
+}
+.link_cabinet a {
+    color: #fff; font-family: Segoe UI Light, sans-serif,Tahoma, serif;  
+    text-decoration: none; font-weight: 700; font-size: 150%;
+}
+.link_cabinet:hover {
+    width: 380px;  padding: 10px;  margin: 10px auto;  background: #008B8B; 
+    text-align: center;  display: block; background: lightseagreen;
+}
+
+.pager {
+    text-align: left;  float: left; margin: 5px;  padding-top: 4px;
+}
+
+.page_count {
+    width: 50px; height: 33px;  margin-left: 35px;
+}
+.selected_page {
+    color: #000088  ; margin: 5px;  text-decoration: none;  background: #fff;  padding: 4px 8px;  border: 1px solid #000088;
+}
+.href {
+    color: #fff; margin: 5px;  background: #000088;  padding: 5px 9px;  font-weight: 800;
+}
+
+.input3[type=submit]{
+
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.input3[type=submit]:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+
+}
+
+.send_input{
+    width: auto;
+    font:normal 16px Verdana, Geneva, sans-serif;
+    font-style:normal;
+    color:#000;
+    background:#fff;
+    border:1px solid #000099;
+    text-shadow:0px 1px 0px #fff;
+    box-shadow:0px 1px 10px #d1cfd1;
+    -moz-box-shadow:0px 1px 10px #d1cfd1;
+    -webkit-box-shadow:0px 1px 10px #d1cfd1;
+    padding: 7px;
+}
+.send_input2{
+    width: 235px;
+    font:normal 16px Verdana, Geneva, sans-serif;
+    font-style:normal;
+    color:#000;
+    background:#fff;
+    border:1px solid #000099;
+    text-shadow:0px 1px 0px #fff;
+    box-shadow:0px 1px 10px #d1cfd1;
+    -moz-box-shadow:0px 1px 10px #d1cfd1;
+    -webkit-box-shadow:0px 1px 10px #d1cfd1;
+    padding: 7px;
+}

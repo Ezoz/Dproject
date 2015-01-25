@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Faces Configuration Only" version="2">
+    <Scope Scope="Faces Configuration Only">
+        <Node id="pages/admin.xhtml" x="327" y="298" zoom="false"/>
+        <Node id="index.xhtml" x="345" y="457" zoom="true"/>
+        <Node id="pages/report_create.xhtml" x="590" y="43" zoom="true"/>
+        <Node id="pages/cabinet.xhtml" x="313" y="97" zoom="false"/>
+        <Node id="pages/main.xhtml" x="33" y="329" zoom="false"/>
+        <Node id="pages/report_update.xhtml" x="13" y="55" zoom="true"/>
+    </Scope>
+    <Scope Scope="Project">
+        <Node id="templates/header.xhtml" x="400" y="600" zoom="true"/>
+        <Node id="templates/index/index_welcome.xhtml" x="650" y="450" zoom="true"/>
+        <Node id="templates/cabinet/cabinet_template.xhtml" x="1400" y="150" zoom="true"/>
+        <Node id="pages/main.xhtml" x="32" y="223" zoom="true"/>
+        <Node id="templates/main/main_template.xhtml" x="650" y="600" zoom="true"/>
+        <Node id="templates/main/user_welcome.xhtml" x="900" y="300" zoom="true"/>
+        <Node id="templates/index/index_footer.xhtml" x="150" y="450" zoom="true"/>
+        <Node id="templates/cabinet/demo.xhtml" x="900" y="450" zoom="true"/>
+        <Node id="templates/main/main_widgets.xhtml" x="1150" y="300" zoom="true"/>
+        <Node id="templates/locales.xhtml" x="900" y="150" zoom="true"/>
+        <Node id="templates/index/index_header.xhtml" x="150" y="150" zoom="true"/>
+        <Node id="index.xhtml" x="54" y="59" zoom="true"/>
+        <Node id="templates/cabinet/cabinet_form_template.xhtml" x="650" y="300" zoom="true"/>
+        <Node id="pages/cabinet.xhtml" x="400" y="150" zoom="true"/>
+        <Node id="templates/cabinet/query_tpl.xhtml" x="1150" y="150" zoom="true"/>
+        <Node id="templates/main/main_news.xhtml" x="150" y="300" zoom="true"/>
+        <Node id="templates/cabinet/cabinet_form1.xhtml" x="400" y="300" zoom="true"/>
+        <Node id="templates/cabinet/reports.xhtml" x="98" y="605" zoom="true"/>
+        <Node id="templates/index/index_auth.xhtml" x="650" y="150" zoom="true"/>
+        <Node id="templates/index/index_template.xhtml" x="400" y="450" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations">
+        <Node id="index.xhtml" x="272" y="352" zoom="true"/>
+        <Node id="pages/cabinet.xhtml" x="568" y="85" zoom="true"/>
+        <Node id="pages/main.xhtml" x="438" y="208" zoom="true"/>
+    </Scope>
+</Scene>

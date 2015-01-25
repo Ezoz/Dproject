@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet library="css" name="cabinet.css"  />
+        <h:outputStylesheet library="css" name="admin.css"  />
+    </h:head>
+    <h:body>
+        <ui:composition>
+            <h:form>
+
+                <p:dataTable id="ReportList" value="#{reportController.reportList}"  var="rep" paginator="true" styleClass="rep_list"  rows="5"
+                             paginatorTemplate="{CurrentPageReport} {PageLinks} {RowsPerPageDropdown}"
+                             rowsPerPageTemplate="5,10,15" resizableColumns="true" style="width:100%;">
+
+
+                    <p:column headerText="№">
+                        <h:outputText value="#{rep.id}" />
+                    </p:column>
+
+                    <p:column headerText="#{msg.date_begin}">
+                        <h:outputText value="#{rep.dateBegin}" />
+                    </p:column>
+
+                    <p:column headerText="#{msg.user_area}">
+                        <h:outputText value="#{rep.user}" />
+                    </p:column>
+
+                    <p:column headerText="#{msg.model_equip}">
+                        <h:outputText value="#{rep.model}" />
+                    </p:column>
+
+                    <p:column headerText="#{msg.invent_number}">
+                        <h:outputText value="#{rep.inventory}" />
+                    </p:column>
+
+                    <p:column headerText="#{msg.serial_num}">
+                        <h:outputText value="#{rep.serial}" />
+                    </p:column>
+
+                    <p:column headerText="#{msg.date_end}">
+                        <h:outputText value="#{rep.dateEnd}" />
+                    </p:column>
+
+                    <p:column headerText="#{msg.descr_problem}">
+                        <h:outputText value="#{rep.description}" />
+                    </p:column>
+
+                    <p:column headerText="#{msg.decision}">
+                        <h:outputText value="#{rep.desicion}" />
+                    </p:column> 
+
+                    <p:column headerText="#{msg.performer}">
+                        <h:outputText value="#{rep.performer}" />
+                    </p:column> 
+
+                    <p:column headerText="o">
+                        <h:outputText value="#{rep.edit}" />
+                    </p:column>    
+
+                </p:dataTable>
+            </h:form>
+
+        </ui:composition>
+
+    </h:body>
+</html>

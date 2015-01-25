@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <h:outputStylesheet library="css" name="cabinet.css"  />
+    </h:head>
+    <h:body>
+        <ui:composition>
+
+
+
+            <h3 align="center"> #{msg.update_form}</h3>
+            <div class="update_form">
+                <h:form id="update_report">
+
+                    <p><h:commandButton immediate="true" action="#{reportController.cancelEdit()}"  value="#{msg.cancel}" styleClass="input3" /> </p>
+                    <p><h:commandButton action="#{reportController.updateReports()}"  value="#{msg.save}" styleClass="input3" /> </p>
+
+
+                    <h:dataTable id="update" value="#{reportController.reportList}" var="rep">
+
+                        <table>
+                            <h:column>
+                                <tr>
+                                    <td><h3> <h:outputText value="#{msg.date_begin}" rendered="#{rep.edit}"/></h3></td>
+                                    <td><h:inputText id="date_begin" value="#{rep.dateBegin}" styleClass="send_input2" rendered="#{rep.edit}" /> </td>
+                                </tr>
+                            </h:column>
+
+
+                            <h:column>
+                                <tr>
+                                    <td><h3><h:outputText value="#{msg.user_area}" rendered="#{rep.edit}"/></h3></td>
+                                    <td><h:selectOneMenu id="user_area" value="#{rep.user}" rendered="#{rep.edit}">
+                                            <f:selectItems value="#{reportController.equipUserList}"/>                          
+                                        </h:selectOneMenu> 
+                                    </td>                      
+                                </tr>
+                            </h:column>
+
+
+                            <h:column>
+                                <tr>
+                                    <td><h3> <h:outputText value="#{msg.model_equip}" rendered="#{rep.edit}"/></h3></td>
+                                    <td><h:selectOneMenu id="model_equip" value="#{rep.model}" rendered="#{rep.edit}">
+                                            <f:selectItems value="#{reportController.equipModelList}"/>                          
+                                        </h:selectOneMenu>
+                                    </td>
+                                </tr>
+                            </h:column>
+
+
+                            <h:column>
+                                <tr>
+                                    <td><h3> <h:outputText value="#{msg.invent_number}" rendered="#{rep.edit}"/></h3></td>
+                                    <td><h:selectOneMenu id="invent_number" value="#{rep.inventory}" rendered="#{rep.edit}" >
+                                            <f:selectItems value="#{reportController.equipInventList}"/>                          
+                                        </h:selectOneMenu>
+                                    </td>
+                                </tr>
+                            </h:column>
+
+                            <h:column>
+                                <tr>
+                                    <td><h3> <h:outputText value="#{msg.serial_num}" rendered="#{rep.edit}"/></h3></td>
+                                    <td><h:inputText id="serial_num" value="#{rep.serial}" styleClass="send_input2" rendered="#{rep.edit}"/></td>
+                                </tr>
+                            </h:column>
+                            <h:column>
+                                <tr>
+                                    <td><h3> <h:outputText value="#{msg.descr_problem}" rendered="#{rep.edit}"/></h3></td>
+                                    <td><h:inputTextarea id="descr_problem" value="#{rep.description}" rows="3" cols="25" styleClass="send_input2" rendered="#{rep.edit}"/></td>
+                                </tr>
+                            </h:column>
+                            <h:column>
+                                <tr>
+                                    <td><h3> <h:outputText value="#{msg.decision}" rendered="#{rep.edit}"/></h3></td>
+                                    <td><h:inputTextarea id="decision" value="#{rep.desicion}" rows="6" cols="35" styleClass="send_input" rendered="#{rep.edit}"/></td>
+                                </tr>
+                            </h:column>
+                            <h:column>
+                                <tr>
+                                    <td><h3> <h:outputText value="#{msg.date_end}" rendered="#{rep.edit}"/></h3></td>
+                                    <td><h:inputText id="date_end" value="#{rep.dateEnd}" styleClass="send_input2" rendered="#{rep.edit}"/></td>
+                                </tr>
+                            </h:column>
+                            <h:column>
+                                <tr>
+                                    <td><h3> <h:outputText value="#{msg.performer}" rendered="#{rep.edit}"/></h3></td>
+                                    <td><h:selectOneMenu id="performer" value="#{rep.performer}" rendered="#{rep.edit}" >
+                                            <f:selectItems value="#{reportController.performerList2}"/>                          
+                                        </h:selectOneMenu></td>
+                                </tr>
+                            </h:column>
+                            <h:column>
+                                <tr>
+                                    <td><h3> <h:outputText value="#{msg.department}" rendered="#{rep.edit}"/></h3></td>
+                                    <td><h:selectOneMenu id="department" value="#{rep.department}" rendered="#{rep.edit}">
+                                            <f:selectItem itemValue="IT"   itemLabel= "Информационные технологии"/>
+                                            <f:selectItem itemValue="TK"   itemLabel= "Телекоммуникации"/>                        
+                                        </h:selectOneMenu></td>
+                                </tr>
+                            </h:column>
+
+                        </table> 
+                        
+                    </h:dataTable>
+
+
+
+                    <script language="javascript">
+                        document.getElementById("new_report:date_begin").setAttribute("placeholder","#{msg.date_format}");
+                        document.getElementById("new_report:date_end").setAttribute("placeholder","#{msg.date_format}");                            
+                    </script>
+
+                </h:form>
+            </div>
+
+
+
+
+        </ui:composition>
+
+
+    </h:body>
+</html>
